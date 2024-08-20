@@ -3,9 +3,10 @@
 . /lib/functions.sh
 . /etc/openwrt_release
 
-wifi_password="TPTlam011205@!"
-ten_wifi="TPT Lam"
-hostname="DOANDUY"
+wifi_password="123456"
+ten_wifi="My Wifi"
+hostname="mywrt"
+lan_ip_address="192.168.15.1"
 
 uci set dropbear.@dropbear[0].PasswordAuth='on'
 uci set dropbear.@dropbear[0].RootPasswordAuth='on'
@@ -15,12 +16,12 @@ uci commit dropbear
 
 sed -i -re 's/^(option check_signature.*)/#\1/g' /etc/opkg.conf
 
-uci set network.lan.ipaddr="192.168.1.1"
+uci set network.lan.ipaddr=${lan_ip_address}
 uci commit network
 /etc/init.d/network restart
 
-uci set 'network.lan.ipv6=0'
-uci set 'network.wan.ipv6=0'
+uci set 'network.lan.ipv6=1'
+uci set 'network.wan.ipv6=1'
 uci set 'dhcp.lan.dhcpv6=disabled'
 /etc/init.d/odhcpd disable
 /etc/init.d/odhcpd stop
@@ -35,7 +36,7 @@ uci set network.lan.delegate="0"
 uci commit network
 /etc/init.d/network restart
 
-uci set base_config.@status[0].SSID='TPT Lam'
+uci set base_config.@status[0].SSID=${ten_wifi}
 uci set base_config.@status[0].SSID_PASSWD=${wifi_password}
 uci set base_config.@status[0].country="CN"
 uci commit base_config
