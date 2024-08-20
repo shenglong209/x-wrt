@@ -437,7 +437,7 @@ CONFIG_TARGET_INIT_ENV=""
 CONFIG_TARGET_INIT_CMD="/sbin/init"
 CONFIG_TARGET_INIT_SUPPRESS_STDERR=y
 CONFIG_VERSIONOPT=y
-CONFIG_VERSION_DIST="DOANDUY"
+CONFIG_VERSION_DIST="myWrt"
 CONFIG_VERSION_NUMBER="23.10_b202311291106"
 CONFIG_VERSION_CODE="Lunar"
 CONFIG_VERSION_REPO="http://downloads.openwrt.org/snapshots"
@@ -466,8 +466,8 @@ CONFIG_FEED_small=y
 # CONFIG_PACKAGE_attendedsysupgrade-common is not set
 # CONFIG_PACKAGE_auc is not set
 CONFIG_PACKAGE_base-files=y
-CONFIG_PACKAGE_block-mount=m
-CONFIG_PACKAGE_blockd=m
+CONFIG_PACKAGE_block-mount=y
+CONFIG_PACKAGE_blockd=y
 CONFIG_PACKAGE_bridge=y
 CONFIG_PACKAGE_busybox=y
 CONFIG_BUSYBOX_CUSTOM=y
@@ -3456,8 +3456,8 @@ CONFIG_PACKAGE_kmod-macvlan=y
 CONFIG_PACKAGE_kmod-mdio-devres=y
 # CONFIG_PACKAGE_kmod-mdio-gpio is not set
 # CONFIG_PACKAGE_kmod-mhi-net is not set
-# CONFIG_PACKAGE_kmod-mhi-wwan-ctrl is not set
-# CONFIG_PACKAGE_kmod-mhi-wwan-mbim is not set
+CONFIG_PACKAGE_kmod-mhi-wwan-ctrl=y
+CONFIG_PACKAGE_kmod-mhi-wwan-mbim=y
 CONFIG_PACKAGE_kmod-mii=y
 # CONFIG_PACKAGE_kmod-mlx4-core is not set
 # CONFIG_PACKAGE_kmod-mlx5-core is not set
@@ -7049,7 +7049,7 @@ CONFIG_PACKAGE_atinout=y
 # CONFIG_PACKAGE_kamailio is not set
 # CONFIG_PACKAGE_miax is not set
 CONFIG_PACKAGE_modeminfo=y
-# CONFIG_PACKAGE_modeminfo-qmi is not set
+CONFIG_PACKAGE_modeminfo-qmi=y
 # CONFIG_PACKAGE_modeminfo-serial-dell is not set
 # CONFIG_PACKAGE_modeminfo-serial-fibocom is not set
 # CONFIG_PACKAGE_modeminfo-serial-gosun is not set
@@ -8496,7 +8496,7 @@ CONFIG_PACKAGE_lsof=y
 # CONFIG_PACKAGE_macchanger is not set
 # CONFIG_PACKAGE_mandoc is not set
 # CONFIG_PACKAGE_mbedtls-util is not set
-# CONFIG_PACKAGE_mbim-utils is not set
+CONFIG_PACKAGE_mbim-utils=y
 # CONFIG_PACKAGE_mbtools is not set
 # CONFIG_PACKAGE_mc is not set
 # CONFIG_PACKAGE_mc-skins is not set
@@ -8587,7 +8587,7 @@ CONFIG_PACKAGE_procps-ng-ps=y
 # CONFIG_PACKAGE_psmisc is not set
 # CONFIG_PACKAGE_pv is not set
 # CONFIG_PACKAGE_qfirehose is not set
-# CONFIG_PACKAGE_qmi-utils is not set
+CONFIG_PACKAGE_qmi-utils=y
 CONFIG_PACKAGE_qrencode=m
 # CONFIG_PACKAGE_quectel-timesync is not set
 # CONFIG_PACKAGE_quota is not set
