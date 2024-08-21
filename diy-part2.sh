@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.15.1/g' package/base-files/files/bin/config_generate
 sed -i '/CONFIG_PACKAGE_glib2=y/d' .config
 echo 'CONFIG_FEED_atinout=y' >>.config
 echo 'CONFIG_PACKAGE_luci-app-atinout-mod=y' >>.config
